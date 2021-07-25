@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'JF-Flat-Regular';
+    src: url('../fonts/JF-Flat-Regular.ttf')  format('truetype');
+     /*  url("/fonts/JF Flat Regular/OpenSans-Regular-webfont.woff") format("woff"); */
+  }
+  
+ 
+body {
+    font-family: 'JF-Flat-Regular';
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+.home_scr {
+   
+        border-radius: 10px !important;
+        width: 70% !important;
+   
+}
+.quiz_scr{
+    border-radius: 10px !important;
+    width: 50% !important;
+}
