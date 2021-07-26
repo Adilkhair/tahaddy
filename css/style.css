@@ -23,4 +23,11 @@ main {
 .quiz_scr{
     border-radius: 10px !important;
     width: 50% !important;
+   
+}
+
+.btn, .btn-large, .btn-small{
+    color: #000 !important;
+    background-color: #fff ;
+     border: 1px gray solid;
 }
