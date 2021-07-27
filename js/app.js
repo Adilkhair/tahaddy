@@ -119,7 +119,7 @@ jQuery(document).ready(function(){
       $('#btn2').attr('disabled', true); 
       $('#btn3').attr('disabled', true); 
       $('#btn4').attr('disabled', true); 
-    $('h3').text("Time out")
+    $('h3').text("انتهي الوقت");
       $('h3').text("النتيجة" + points + " درجة!") // if you see final score then open this comment
     $('span').hide()
     $(".submit").hide();
