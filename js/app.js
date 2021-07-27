@@ -77,14 +77,14 @@ jQuery(document).ready(function(){
     /* alert("user ans:"+ userAns);
     alert("user correctAns:"+ correctAns); */
     if (userAns  == correctAns ){
-    $('h3').text("Right answer")
+    $('h3').text("إجابة صحيحة")
     
     points += 1;
     
 
     }
     else{
-    $('h3').text("Wrong Answer");
+    $('h3').text("إجابة خاطئة");
     }
 
     randomnumber=Math.floor( Math.random() * 4 );
@@ -108,7 +108,7 @@ jQuery(document).ready(function(){
     var count = 20;
     var timer = setInterval(function() {
     $('h3').text("مضي من الوقت ["+ count+ "] ثانية ");
-    count --  ;
+    count -=2  ;
     if(count == 0) {
     stopInterval()
     }
