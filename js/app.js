@@ -3,7 +3,7 @@
 jQuery(document).ready(function(){
   var  data2= [
     {
-      q : "Book?",
+      q : "Book",
       o : [
         "قلم",
         "كتاب",
@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
       a : 1 // arrays start with 0, so answer is 70 meters
     },
     {
-      q : "Car?",
+      q : "Car",
       o : [
         "تاب",
         "حاسب الي",
@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
       a : 3
     },
     {
-      q : "Man?",
+      q : "Man",
       o : [
         "أخ",
         "أخت",
@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
       a : 0
     },
     {
-      q : "Tree?",
+      q : "Tree",
       o : [
         "تلفاذ",
         "بيت",
