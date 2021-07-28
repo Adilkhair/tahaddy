@@ -102,7 +102,7 @@ jQuery(document).ready(function(){
 
     $('#randomquestion').text(data2[randomnumber].q);
 
-    //$(".btn").css("background-color","white");
+     $(".btn").css("background-color","white");
     $('#btn1').text(data2[randomnumber].o[0]);
     $('#btn2').text( data2[randomnumber].o[1]);
     $('#btn3').text( data2[randomnumber].o[2]);
