@@ -32,9 +32,9 @@ main {
      border: 1px gray solid;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover {
+/* .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: #fff !important;
 }
 .btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
     background-color: #fff !important;
-}
+} */

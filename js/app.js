@@ -86,7 +86,7 @@ jQuery(document).ready(function(){
     $('h3').text("إجابة صحيحة")
     
     points += 1;
-    
+  //  $(this).css("background-color","yellow");
 
     }
     else{
@@ -101,6 +101,8 @@ jQuery(document).ready(function(){
     $('#randomquestion').text(data2[randomnumber].q);
 
     $('#randomquestion').text(data2[randomnumber].q);
+
+    $(".btn").css("background-color","white");
     $('#btn1').text(data2[randomnumber].o[0]);
     $('#btn2').text( data2[randomnumber].o[1]);
     $('#btn3').text( data2[randomnumber].o[2]);
