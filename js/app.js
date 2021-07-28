@@ -75,7 +75,7 @@ jQuery(document).ready(function(){
     let correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
     console.log("correctAns:" +correctAns);
 
-    $('.btn').on('click', function(){
+    $('.btn_opt').on('click', function(){
     //console.log(data)
    
    
