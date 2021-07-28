@@ -26,11 +26,11 @@ main {
    
 }
 
-.btn, .btn-large, .btn-small{
+/* .btn, .btn-large, .btn-small{
     color: #000 !important;
     background-color: #fff ;
      border: 1px gray solid;
-}
+} */
 
 /* .btn:hover, .btn-large:hover, .btn-small:hover {
     background-color: #fff !important;
