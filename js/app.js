@@ -102,12 +102,16 @@ jQuery(document).ready(function(){
 
     $('#randomquestion').text(data2[randomnumber].q);
 
-     $(".btn").css("background-color","white");
+   //  $(".btn").css("background-color","white");
     $('#btn1').text(data2[randomnumber].o[0]);
-    $('#btn2').text( data2[randomnumber].o[1]);
-    $('#btn3').text( data2[randomnumber].o[2]);
-    $('#btn4').text( data2[randomnumber].o[3]);
+     
 
+    $('#btn2').text( data2[randomnumber].o[1]);
+     
+    $('#btn3').text( data2[randomnumber].o[2]);
+     
+    $('#btn4').text( data2[randomnumber].o[3]);
+    
      correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
    // console.log("correctAns:" +correctAns);
     }//if 
