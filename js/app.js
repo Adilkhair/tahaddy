@@ -53,8 +53,12 @@ jQuery(document).ready(function(){
       a : 3
     }
     ]
-
-    let randomnumber=Math.floor( Math.random() * 4 );
+    let question_count=1;
+    //let randomnumber=Math.floor( Math.random() * 4 );
+    var ranNums = shuffle([0,1,2,3,4]);
+    randomnumber = ranNums.next().value;
+     
+    $('#question_count').text(question_count+"-"+5);
     console.log("randomnumber:"+randomnumber);
     let points=0;
     $.ajax({
@@ -73,6 +77,8 @@ jQuery(document).ready(function(){
 
     $('.btn').on('click', function(){
     //console.log(data)
+    question_count++;
+   
     let userAns=$(this).text();
     /* alert("user ans:"+ userAns);
     alert("user correctAns:"+ correctAns); */
@@ -86,9 +92,11 @@ jQuery(document).ready(function(){
     else{
     $('h3').text("إجابة خاطئة");
     }
-
-    randomnumber=Math.floor( Math.random() * 4 );
-    console.log(randomnumber);
+    if(question_count <= 5) {
+     
+      $('#question_count').text(question_count+"-"+5);
+    randomnumber=ranNums.next().value;//Math.floor( Math.random() * 4 );
+    console.log("randomnumber:"+randomnumber);
     //console.log(data[randomnumber].question)
     $('#randomquestion').text(data2[randomnumber].q);
 
@@ -100,30 +108,44 @@ jQuery(document).ready(function(){
 
      correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
    // console.log("correctAns:" +correctAns);
+    }//if 
+      else { stopInterval();} 
 
     })
     }
     }) //$ajax
-
-    var count = 20;
+//////////////////////////////////////////////////////////////////////
+    var count =0;
     var timer = setInterval(function() {
     $('h3').text("مضي من الوقت ["+ count+ "] ثانية ");
-    count -=2  ;
-    if(count == 0) {
+    count ++  ;
+    /* if(count == 0) {
     stopInterval()
-    }
+    } */
+    
+    
     }, 2000);
-    //////////////////////////////////
+    /////////////////////////////////////////////////////////////////
     var stopInterval = function() {
-      $('#btn1').attr('disabled', true); 
+     /*  $('#btn1').attr('disabled', true); 
       $('#btn2').attr('disabled', true); 
       $('#btn3').attr('disabled', true); 
-      $('#btn4').attr('disabled', true); 
-    $('h3').text("انتهي الوقت");
-      $('h3').text("النتيجة" + points + " درجة!") // if you see final score then open this comment
+      $('#btn4').attr('disabled', true);  */
+      $('#btn1').hide();
+      $('#btn2').hide();
+      $('#btn3').hide();
+      $('#btn4').hide();
+      $('#randomquestion').hide();
+    $('h3').text("انتهي الإختبار");
+      $('h3').text("النتيجة" + points + " درجة! "); // if you see final score then open this comment
     $('span').hide()
     $(".submit").hide();
     clearInterval(timer);
+    $("#after_result_action>p").text("النسبة:"+(points/5)*100 + "%");
+    $("#after_result_action> #correct_count").text("عدد الإجابات الصحيحة:"+ points );
+    $("#after_result_action> #rowng_count").text("عدد الاجابات الخاطئة:"+   (5-points)  );
+    
+    
     $("#after_result_action").show();
     }
     /////////////////////////////////////
@@ -182,3 +204,17 @@ const categ = [
       q.innerHTML = output;
       }
       document.addEventListener("DOMContentLoaded", showQues); */
+
+      function* shuffle(array) {
+
+        var i = array.length;
+    
+        while (i--) {
+            yield array.splice(Math.floor(Math.random() * (i+1)), 1)[0];
+        }
+    
+    }
+    /*var ranNums = shuffle([1,2,3,4,5,6,7,8,9,10]);
+ranNums.next().value;    // first random number from array
+ranNums.next().value;    // second random number from array
+ranNums.next().value;    // etc.*/
