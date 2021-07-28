@@ -45,8 +45,8 @@ main {
     background-color: green;
     border: 1px solid green;
     height: 100%;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    width: 50%;
+    border-radius: 10%;
+    -moz-border-radius: 10%;
+    -webkit-border-radius: 10%;
+    width: 100%;
 }

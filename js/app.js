@@ -160,6 +160,7 @@ jQuery(document).ready(function(){
     
     
     $("#after_result_action").show();
+    $("#after_result_action_btn").show();
     }
     /////////////////////////////////////
 
