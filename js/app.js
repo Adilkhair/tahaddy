@@ -92,10 +92,13 @@ jQuery(document).ready(function(){
      
     $(this).attr('style', 'background-color: green !important');
    
+   $(this).append('<i class="material-icons">check</i>');
     }
     else{
     $('h3').text("إجابة خاطئة");
     $(this).attr('style', 'background-color: red !important');
+   $(this).append('<i class="material-icons">clear</i>');
+
     }
     
    setTimeout(function() 

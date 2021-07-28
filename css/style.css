@@ -38,3 +38,15 @@ main {
 .btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
     background-color: #fff !important;
 } */
+
+#after_result_action {
+    font-size: 17px;
+    color: #fff;
+    background-color: green;
+    border: 1px solid green;
+    height: 100%;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 50%;
+}
