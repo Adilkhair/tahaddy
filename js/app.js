@@ -77,7 +77,9 @@ jQuery(document).ready(function(){
 
     $('.btn').on('click', function(){
     //console.log(data)
-    question_count++;
+   
+   
+         question_count++;
    
     let userAns=$(this).text();
     /* alert("user ans:"+ userAns);
@@ -86,37 +88,39 @@ jQuery(document).ready(function(){
     $('h3').text("إجابة صحيحة")
     
     points += 1;
-  //  $(this).css("background-color","yellow");
-
+     
+     
+    $(this).attr('style', 'background-color: green !important');
+   
     }
     else{
     $('h3').text("إجابة خاطئة");
+    $(this).attr('style', 'background-color: red !important');
     }
-    if(question_count <= 5) {
-     
-      $('#question_count').text(question_count+"-"+5);
-    randomnumber=ranNums.next().value;//Math.floor( Math.random() * 4 );
-    console.log("randomnumber:"+randomnumber);
-    //console.log(data[randomnumber].question)
-    $('#randomquestion').text(data2[randomnumber].q);
-
-    $('#randomquestion').text(data2[randomnumber].q);
-
-   //  $(".btn").css("background-color","white");
-    $('#btn1').text(data2[randomnumber].o[0]);
-     
-
-    $('#btn2').text( data2[randomnumber].o[1]);
-     
-    $('#btn3').text( data2[randomnumber].o[2]);
-     
-    $('#btn4').text( data2[randomnumber].o[3]);
     
-     correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
-   // console.log("correctAns:" +correctAns);
-    }//if 
-      else { stopInterval();} 
+   setTimeout(function() 
+    {
+      if(question_count <= 5) { $('.btn').attr('style', 'background-color: #fff !important');
+       $('#randomquestion').text(data2[randomnumber].q);
+       $('#question_count').text(question_count+"-"+5);
+       $('#btn1').text(data2[randomnumber].o[0]);
+       $('#btn2').text( data2[randomnumber].o[1]);
+       $('#btn3').text( data2[randomnumber].o[2]);
+       $('#btn4').text( data2[randomnumber].o[3]);
+    }
+  }, 300);
 
+ 
+    
+    
+     
+  if(question_count <= 5) {
+    randomnumber=ranNums.next().value;//Math.floor( Math.random() * 4 );     
+     correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
+  }
+   
+    if(question_count > 5) { stopInterval();} 
+   
     })
     }
     }) //$ajax
