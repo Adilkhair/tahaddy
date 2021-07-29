@@ -232,3 +232,12 @@ const categ = [
 ranNums.next().value;    // first random number from array
 ranNums.next().value;    // second random number from array
 ranNums.next().value;    // etc.*/
+
+
+function passing(parama1, page){
+var firstDate=document.getElementsByName("firstDate");
+var secondDate=document.getElementsByName("secondDate");
+var queryString = "?para1=" + parama1  ;
+window.location.href = page + queryString;
+}
+ 
