@@ -66,6 +66,17 @@
            var gname = localStorage.getItem('gname');
            var topic = localStorage.getItem('topic');
         //alert("group name:"+gname + "topic:"+topic);
+        //call ajax to create group
+        
+         $.post("demo_test_post.asp",
+          {
+            name: "Donald Duck",
+            city: "Duckburg"
+          },
+          function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+          });
+        
           return true;
          });
         /*  function save_topic(){
