@@ -1,7 +1,47 @@
 
 
 jQuery(document).ready(function(){
-  var  data2= [
+ /*  var  data2= [{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
+  "question_choice":
+  [
+  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
+  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
+  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
+ ]
+},
+{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
+  "question_choice":
+  [
+  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
+  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
+  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
+ ]
+},
+{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
+  "question_choice":
+  [
+  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
+  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
+  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
+ ]
+},
+{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
+  "question_choice":
+  [
+  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
+  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
+  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
+ ]
+},
+{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
+  "question_choice":
+  [
+  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
+  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
+  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
+ ]
+}
+] *//* [
     {
       q : "Book",
       o : [
@@ -52,27 +92,64 @@ jQuery(document).ready(function(){
       ],
       a : 3
     }
-    ]
+    ] */
     let question_count=1;
     //let randomnumber=Math.floor( Math.random() * 4 );
-    var ranNums = shuffle([0,1,2,3,4]);
-    randomnumber = ranNums.next().value;
+   
+/*####### get 10 numbers no repeate ################################*/
+var min = 0;
+var max = 10;
+//Number of numbers to extract
+var stop = 10;
+var numbers = [];
+for (let i = 0; i < stop; i++) {
+  var n =  Math.floor(Math.random() * max) + min;
+  var check = numbers.includes(n);
+  if(check === false) {
+    numbers.push(n);
+  } else {
+    while(check === true){
+      n = Math.floor(Math.random() * max) + min;
+      check = numbers.includes(n);
+        if(check === false){
+          numbers.push(n);
+        }
+     }
+  }
+}
+/*##########End##################################################################*/
+var ranNums = shuffle(numbers);
+    randomnumber =ranNums.next().value;
      
-    $('#question_count').text(question_count+"-"+5);
+    $('#question_count').text(question_count+"-"+10);
     console.log("randomnumber:"+randomnumber);
     let points=0;
+    let id= parseURLParams(window.location.href).id;  //topic id
+    let name= parseURLParams(window.location.href).name;  //topic id
+    $("#topic_name").text(name);
     $.ajax({
     method : 'GET',
-    url:'https://api.jsonbin.io/b/5dc2a6f7ce068a7724676fa9',
-    success:function newQuestion(data){
-       
-    $('#randomquestion').text(data2[randomnumber].q);
-    $('#btn1').text(data2[randomnumber].o[0]);
-    $('#btn2').text( data2[randomnumber].o[1]);
-    $('#btn3').text( data2[randomnumber].o[2]);
-    $('#btn4').text( data2[randomnumber].o[3]);
+    url:'http://localhost/tahaddy_dash/public/test?id='+id,
+    dataType: 'json',
+    success:function newQuestion(data2){
+      if(data2.length == 0)
+         alert("لا توجد اسئلة");
+    $('#randomquestion').text(data2[randomnumber].question);
+      $('#btn1').text(data2[randomnumber].question_choice[0].choice);
+      $('#btn2').text( data2[randomnumber].question_choice[1].choice);
+      $('#btn3').text( data2[randomnumber].question_choice[2].choice);
+    // $('#btn4').text( data2[randomnumber].question_choice[3].o);
+    let correctAnsIndex=0;
+    let correctAns ="";
+    data2[randomnumber].question_choice.forEach(myFunction);
+    function myFunction(item, index, arr) {
+      if(arr[index].is_right == "y"){
+        correctAnsIndex=index;
+        correctAns=arr[index].choice;
+      } 
+    } 
 
-    let correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
+   //{id ,created_at ,updated_at ,question_id ,is_right ,o} 
     console.log("correctAns:" +correctAns);
 
     $('.btn_opt').on('click', function(){
@@ -103,13 +180,12 @@ jQuery(document).ready(function(){
     
    setTimeout(function() 
     {
-      if(question_count <= 5) { $('.btn').attr('style', 'background-color: #fff !important');
-       $('#randomquestion').text(data2[randomnumber].q);
-       $('#question_count').text(question_count+"-"+5);
-       $('#btn1').text(data2[randomnumber].o[0]);
-       $('#btn2').text( data2[randomnumber].o[1]);
-       $('#btn3').text( data2[randomnumber].o[2]);
-       $('#btn4').text( data2[randomnumber].o[3]);
+      if(question_count <= 10) { $('.btn').attr('style', 'background-color: #fff !important');
+       $('#randomquestion').text(data2[randomnumber].question);
+       $('#question_count').text(question_count+"-"+10);
+       $('#btn1').text(data2[randomnumber].question_choice[0].choice);
+       $('#btn2').text( data2[randomnumber].question_choice[1].choice);
+       $('#btn3').text( data2[randomnumber].question_choice[2].choice);
     }
   }, 300);
 
@@ -117,12 +193,19 @@ jQuery(document).ready(function(){
     
     
      
-  if(question_count <= 5) {
+  if(question_count <= 10) {
     randomnumber=ranNums.next().value;//Math.floor( Math.random() * 4 );     
-     correctAns = data2[randomnumber].o[data2[randomnumber].a]/*  data2[randomnumber].a ; */
+       
+    data2[randomnumber].question_choice.forEach(myFunction);
+    function myFunction(item, index, arr) {
+      if(arr[index].is_right == "y"){
+        correctAnsIndex=index;
+        correctAns=arr[index].choice;
+      } 
+    } 
   }
    
-    if(question_count > 5) { stopInterval();} 
+    if(question_count > 10) { stopInterval();} 
    
     })
     }
@@ -154,13 +237,34 @@ jQuery(document).ready(function(){
     $('span').hide()
     $(".submit").hide();
     clearInterval(timer);
-    $("#after_result_action>p").text("النسبة:"+(points/5)*100 + "%");
+    $("#after_result_action>p").text("النسبة:"+(points/10)*100 + "%");
     $("#after_result_action> #correct_count").text("عدد الإجابات الصحيحة:"+ points );
-    $("#after_result_action> #rowng_count").text("عدد الاجابات الخاطئة:"+   (5-points)  );
+    $("#after_result_action> #rowng_count").text("عدد الاجابات الخاطئة:"+   (10-points)  );
     
     
     $("#after_result_action").show();
     $("#after_result_action_btn").show();
+
+ ////////////group test
+    let id= parseURLParams(window.location.href).id;  //group
+      let name= parseURLParams(window.location.href).name;
+    //  alert("id:"+id);
+      //alert("name:"+name);
+      let result =(points/10)*100;
+      //call api to add result - save_g_result
+      //save_g_result?std_name=ssss&result=90&quiz_group_id=1
+            $.ajax({
+              method : 'GET',
+              url:'http://localhost/tahaddy_dash/public/save_g_result?std_name='+ name+'&result='+result+'&quiz_group_id='+id,
+              //dataType: 'json',
+              success:function newQuestion(data){
+               alert("لقد تم حفظ نتيجة الاختبار");
+               
+               $("#after_result_action_btn > a").attr("href", "group_result.html?id="+id);
+              }
+            
+            });
+
     }
     /////////////////////////////////////
 
@@ -241,3 +345,32 @@ var queryString = "?para1=" + parama1  ;
 window.location.href = page + queryString;
 }
  
+
+ ///////////////////////////////////////////////////////////////////////////
+ function parseURLParams(url) {
+  var queryStart = url.indexOf("?") + 1,
+      queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+      query = url.slice(queryStart, queryEnd - 1),
+      pairs = query.replace(/\+/g, " ").split("&"),
+      parms = {}, i, n, v, nv;
+
+  if (query === url || query === "") return;
+
+  for (i = 0; i < pairs.length; i++) {
+      nv = pairs[i].split("=", 2);
+      n = decodeURIComponent(nv[0]);
+      v = decodeURIComponent(nv[1]);
+
+      if (!parms.hasOwnProperty(n)) parms[n] = [];
+      parms[n].push(nv.length === 2 ? v : null);
+  }
+  return parms;
+}
+//////////////////////////////////////////////////////////////////////////////
+ 
+//Sort the array in ascending order
+/* function sort() {
+  numbers.sort(function(a, b){return a-b});
+  document.getElementById("array_number").innerHTML = numbers.join(" - ");
+} */
+////////////////////////////////////////////////////////////////

@@ -21,17 +21,17 @@
         </header>
         <!--============================================================================================-->
         <main style="margin-top: 60px;">
-            <h5 id="logo-container"  class="brand-logo center">إسم المجموعة: المجموعة أ</h5> 
+            <p class="center">إسم المجموعة</p><h5 id="group_name"  class="brand-logo center"></h5> 
            <div class="row center"><div class="col s6 offset-s3">
-               <form   onsubmit="passing()" method="GET" action="quiz_page.html" >
+               
                    <div class="input-field ">
                      <input value=""    id="user_name" type="text" class="col6 validate center">
-                     <label class="active" for="user_name">الاسم</label>
+                     <label class="active" for="user_name">أكتب إسمك</label>
                    </div>
                   
-                   <button class="btn waves-effect waves-light" type="submit"  > <i class="material-icons right">send</i>ابدأ
+                   <button class="btn waves-effect waves-light" id="start_btn"  > <i class="material-icons right">send</i>ابدأ
                  </button>
-               </form></div>
+                </div>
            </div>
        </main>
         <!--============================================================================================-->
@@ -50,7 +50,53 @@
       
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="../js/materialize.min.js"></script>
-      
+         <script>
+       /*   $.ajax({
+          method : 'GET',
+          url:'http://localhost/tahaddy_dash/public/get_group?id='+parseURLParams(window.location.href).id,
+           dataType: 'json',
+             success:function newQuestion(data){
+          //genrate quiz link 
+
+          //  $("#group_name").text(data[0].group_name);
+              // window.location.href="group_link.html?g_id="+data+'#hash';
+            }}); */
+       ///////////////////////////////////////////////////////////////////////////
+     function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return;
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+</script>
+
+   <script>
+ 
+//////////////////////////////////////////////////////////////////////////////
+$("#start_btn").click(function(){
+ /* alert("user name is:"+$('#user_name:text').val());
+ alert("group id="+parseURLParams(window.location.href).id); */
+ let name= $('#user_name:text').val();
+ let id= parseURLParams(window.location.href).g_id;//id is group id
+ let topicid = parseURLParams(window.location.href).topicid;
+ window.location.href="quiz_page.html?g_id="+id+"&topicid="+topicid+"&name="+name;
+  
+});
+////////////////////////////////////////////////////////////////////////////
+     </script>
        <!--  <script src="js/bundle.js"></script> -->
       </body>
       

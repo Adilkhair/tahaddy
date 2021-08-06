@@ -1,103 +1,11 @@
 
 
 jQuery(document).ready(function(){
- /*  var  data2= [{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-}
-] *//* [
-    {
-      q : "Book",
-      o : [
-        "قلم",
-        "كتاب",
-        "سبورة",
-        "قلم"
-      ],
-      a : 1 // arrays start with 0, so answer is 70 meters
-    },
-    {
-      q : "Car",
-      o : [
-        "تاب",
-        "حاسب الي",
-        "تلفاذ",
-        "سيارة"
-      ],
-      a : 3
-    },
-    {
-      q : "Man",
-      o : [
-        "أخ",
-        "أخت",
-        "رجل",
-        "إمراءة"
-      ],
-      a : 2
-    },
-    {
-      q : "Computer",
-      o : [
-        "حاسب الي",
-        "هاتف جوال",
-        "تلفاذ",
-        "كرسي"
-      ],
-      a : 0
-    },
-    {
-      q : "Tree",
-      o : [
-        "تلفاذ",
-        "بيت",
-        "كرسي",
-        "شجرة"
-      ],
-      a : 3
-    }
-    ] */
+  
     let question_count=1;
-    //let randomnumber=Math.floor( Math.random() * 4 );
-   
+ //alert("group");
 /*####### get 10 numbers no repeate ################################*/
-var min = 1;
+var min = 0;
 var max = 10;
 //Number of numbers to extract
 var stop = 10;
@@ -124,12 +32,15 @@ var ranNums = shuffle(numbers);
     $('#question_count').text(question_count+"-"+10);
     console.log("randomnumber:"+randomnumber);
     let points=0;
+    let id= parseURLParams(window.location.href).topicid;  //group id
+    alert("topicid="+id);
     $.ajax({
     method : 'GET',
-    url:'http://localhost/test_blade/public/test',
+    url:'http://localhost/tahaddy_dash/public/g_test?topicid='+id,//passing group id- get tpic name - get q with topic name
     dataType: 'json',
     success:function newQuestion(data2){
-     // alert( (data2[0]));
+      if(data2.length==0) 
+           alert("لا توجد أسئلة هذا الموضوغ");
     $('#randomquestion').text(data2[randomnumber].question);
       $('#btn1').text(data2[randomnumber].question_choice[0].choice);
       $('#btn2').text( data2[randomnumber].question_choice[1].choice);
@@ -240,6 +151,27 @@ var ranNums = shuffle(numbers);
     
     $("#after_result_action").show();
     $("#after_result_action_btn").show();
+
+ 
+    let id= parseURLParams(window.location.href).g_id;  //group id
+      let name= parseURLParams(window.location.href).name;
+     // alert("id:"+id);
+      //alert("name:"+name);
+      let result =(points/10)*100;
+      //call api to add result - save_g_result
+      //save_g_result?std_name=ssss&result=90&quiz_group_id=1
+            $.ajax({
+              method : 'GET',
+              url:'http://localhost/tahaddy_dash/public/save_g_result?std_name='+ name+'&result='+result+'&quiz_group_id='+id,
+              //dataType: 'json',
+              success:function newQuestion(data){
+               alert("لقد تم حفظ نتيجة الاختبار");
+               
+               $("#after_result_action_btn > a").attr("href", "group_result.html?id="+id);
+              }
+            
+            });
+
     }
     /////////////////////////////////////
 
@@ -321,8 +253,27 @@ window.location.href = page + queryString;
 }
  
 
-/////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////////////////////////////////////////
+ function parseURLParams(url) {
+  var queryStart = url.indexOf("?") + 1,
+      queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+      query = url.slice(queryStart, queryEnd - 1),
+      pairs = query.replace(/\+/g, " ").split("&"),
+      parms = {}, i, n, v, nv;
 
+  if (query === url || query === "") return;
+
+  for (i = 0; i < pairs.length; i++) {
+      nv = pairs[i].split("=", 2);
+      n = decodeURIComponent(nv[0]);
+      v = decodeURIComponent(nv[1]);
+
+      if (!parms.hasOwnProperty(n)) parms[n] = [];
+      parms[n].push(nv.length === 2 ? v : null);
+  }
+  return parms;
+}
+//////////////////////////////////////////////////////////////////////////////
  
 //Sort the array in ascending order
 /* function sort() {

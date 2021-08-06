@@ -25,8 +25,8 @@
         <main style="margin-top: 20px;">
              <h2 id="logo-container" class="brand-logo center">موضوع التحدي</h2>
              <div class="container" id="quiz_cat"><br/><br/>
- <h5 class="center">جاري التحميل...</h5>
-                 <!-- <div class="row  center-align">
+
+               <!--   <div class="row  center-align">
                    <a class="waves-effect waves-light btn btn-large home_scr"   href="group_link.html">القران كريم</a>
                  </div>
                   <div class="row  center-align"> 
@@ -37,7 +37,7 @@
                   </div>
                  <div class="row  center-align"> 
                    <a class="waves-effect waves-light btn btn-large home_scr" href="group_link.html">معلومات عامة</a>
-                 </div>-->
+                 </div> -->
               </div>
         </main>
         <footer class="page-footer">
@@ -56,48 +56,48 @@
       
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="../js/materialize.min.js"></script>
-        <!-- <script src="../js/app.js"></script>
-        <script src="js/bundle.js"></script> -->
+        <!--  <script src="../js/app.js"></script>
+       <script src="js/bundle.js"></script> -->
       
        <script>
-         jQuery(document).ready(function(){
-          $.ajax({
-      method : 'GET',
-      dataType: 'json',
-      url:'http://localhost/tahaddy_dash/public/topics',
-      success:function newQuestion(data){
-        const container = document.querySelector("#quiz_cat");
-        /*  const topics = [
-            { name: "قران كريم", id:"1"  },
-            { name: "السيييرة النبوية" , id:"2" },
-            { name: "كلمات انكليزية كريم" , id:"3" },
-            { name: "معلومات عامة" , id:"4" },
-            ] */
-         // alert(data[0].name); 
-              let output = ""
-              data.forEach(
-                ({ name, id }) =>
-                  (output += `
-                            <div class="row  center-align">
-                            <a class="waves-effect waves-light btn btn-large home_scr" onClick="select_topic(this.id)" id=${id} >${name}</a>
-                          </div>
-                          `)
-              );
-              container.innerHTML = output;
-       
-      }});
-       
-          });
-          
-       </script>
-
-       <script>
-      //  $(this).on('click', function(){
-         function select_topic(id){
-             alert("topicid= "+ id);
-          localStorage.setItem('topic',"topic test");
+        jQuery(document).ready(function(){
+         $.ajax({
+     method : 'GET',
+     dataType: 'json',
+     url:'http://localhost/tahaddy_dash/public/topics',
+     success:function newQuestion(data){
+      // alert(data);
+       const container = document.querySelector("#quiz_cat");
+       /*  const topics = [
+           { name: "قران كريم", id:"1"  },
+           { name: "السيييرة النبوية" , id:"2" },
+           { name: "كلمات انكليزية كريم" , id:"3" },
+           { name: "معلومات عامة" , id:"4" },
+           ] */
+        // alert(data[0].name); 
+             let output = ""
+             data.forEach(
+               ({ name, id }) =>
+                 (output += `
+                           <div class="row  center-align">
+                           <a class="waves-effect waves-light btn btn-large home_scr btn_opt" href="group_link.html?g_id=${id}" id=${id} >${name}</a>
+                         </div>       `)
+             );
+             container.innerHTML = output;
+      
+     }});
+      
+      
+     //////////////////////////////////////////////////////////////////////
+     //href="group_link.html?g_id=${id}"     
+     $(this).on('click', function(){
+     /* 
+      var text = $(this).attr('id');
+    alert(text);
+     
+          localStorage.setItem('topic',$(this).text());
            var gname = localStorage.getItem('gname');
-           var topic = localStorage.getItem('topic');
+           var topic =  localStorage.getItem('topic');
            //////////////
            alert("gname:"+gname);
            alert("topic:"+topic);
@@ -107,13 +107,19 @@
   //  dataType: 'json',
     success:function newQuestion(data){
       //genrate quiz link 
+      alert("ajax sccess");
+    alert("data:"+data);
 
-       alert(data);
-   window.location.href="group_link.html?topicid="+id+"&g_id="+data+'#hash';
+ //  window.location.href="group_link.html?g_id="+data+'&topic_id='+topic_id+'#hash';//g_id == is topic id
     }});
-   return false;
-  }
-        </script> 
+ return false; */
+  
+   });
+
+  });
+        
+      </script>
+     
       
       </body>
       

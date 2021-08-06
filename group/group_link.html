@@ -30,7 +30,7 @@
             
         
         </div>
-        <div class="row center"><a class="btn waves-effect waves-light btn-large center" href="join_from_link.html"> <i class="material-icons right"></i>إبداء  
+        <div class="row center"><a onClick="join()" class="btn waves-effect waves-light btn-large center"></a> <i class="material-icons right"></i>إبداء  
         </a>
             </div>
           
@@ -56,13 +56,41 @@
       <script>
 
      jQuery(document).ready(function(){
-         //alert();
+      topicid= parseURLParams(window.location.href).topicid;
        var gname = localStorage.getItem('gname');
        var topic = localStorage.getItem('topic');
-      // alert(topic);
-      // $("input:text").val("Glenn Quagmire");
-       $('#test_link:text').val("www.tahaddy.com/?id="+gname);
+       
+         alert (" topicid="+ topicid) ;
+      //id= is group id
+       $('#test_link:text').val("join_from_link.html?g_id="+parseURLParams(window.location.href).g_id +"&topicid="+topicid);
      });
+
+     ///////////////////////////////////////////////////////////////////////////
+     function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return;
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+//////////////////////////////////////////////////////////////////////////////
+function join(){
+//  alert("link:"+$('#test_link:text').val());
+  window.location.href=$('#test_link:text').val();
+  return false;
+}
       </script>
       
       

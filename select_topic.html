@@ -25,7 +25,8 @@
         <main style="margin-top: 20px;">
              <h2 id="logo-container" class="brand-logo center">موضوع التحدي</h2>
              <div class="container" id="quiz_cat"><br/><br/>
-
+              <h5 class="center">جاري التحميل...</h5>
+<!-- 
                  <div class="row  center-align">
                    <a class="waves-effect waves-light btn btn-large home_scr" href="quiz_page.html">القران كريم</a>
                  </div>
@@ -37,7 +38,7 @@
                   </div>
                  <div class="row  center-align"> 
                    <a class="waves-effect waves-light btn btn-large home_scr" href="quiz_page.html">معلومات عامة</a>
-                 </div>
+                 </div> -->
               </div>
         </main>
         <footer class="page-footer">
@@ -56,8 +57,40 @@
       
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="js/materialize.min.js"></script>
-        <script src="js/app.js"></script>
+      <!--   <script src="js/app.js"></script> -->
        <!--  <script src="js/bundle.js"></script> -->
+       <script>
+         jQuery(document).ready(function(){
+          $.ajax({
+      method : 'GET',
+      dataType: 'json',
+      url:'http://localhost/tahaddy_dash/public/topics',
+      success:function newQuestion(data){
+        const container = document.querySelector("#quiz_cat");
+        /*  const topics = [
+            { name: "قران كريم", id:"1"  },
+            { name: "السيييرة النبوية" , id:"2" },
+            { name: "كلمات انكليزية كريم" , id:"3" },
+            { name: "معلومات عامة" , id:"4" },
+            ] */
+         // alert(data[0].name); 
+              let output = ""
+              data.forEach(
+                ({ name, id }) =>
+                  (output += `
+                            <div class="row  center-align">
+                            <a class="waves-effect waves-light btn btn-large home_scr" href="quiz_page.html?id=${id}&name=${name}">${name}</a>
+                          </div>
+                          `)
+              );
+              container.innerHTML = output;
+       
+      }});
+       
+          });
+          
+       </script>
+
       </body>
       
   </html>
