@@ -246,13 +246,9 @@ var ranNums = shuffle(numbers);
     $("#after_result_action_btn").show();
 
  ////////////group test
-    let id= parseURLParams(window.location.href).id;  //group
+   /*  let id= parseURLParams(window.location.href).id;  //group
       let name= parseURLParams(window.location.href).name;
-    //  alert("id:"+id);
-      //alert("name:"+name);
       let result =(points/10)*100;
-      //call api to add result - save_g_result
-      //save_g_result?std_name=ssss&result=90&quiz_group_id=1
             $.ajax({
               method : 'GET',
               url:'http://localhost/tahaddy_dash/public/save_g_result?std_name='+ name+'&result='+result+'&quiz_group_id='+id,
@@ -263,9 +259,9 @@ var ranNums = shuffle(numbers);
                $("#after_result_action_btn > a").attr("href", "group_result.html?id="+id);
               }
             
-            });
+            }); */
 
-    }
+    }//stop
     /////////////////////////////////////
 
     })

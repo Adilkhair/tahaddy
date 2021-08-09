@@ -10,6 +10,9 @@
       <link type="text/css" rel="stylesheet" href="../css/style.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
+
+     
     </head>
     <body>
         <header>
@@ -23,14 +26,19 @@
         <main style="margin-top: 60px;">
           <h5 id="logo-container"  class="brand-logo center">عدد المضافافين: 10</h5>  
             <div class="row center">
-                <div class="col s6 offset-s3">
+              
+                <div class="col s6 offset-s3" >
                 <form action="select_topic.html" method="post" >
-                    <input value="http://www.gtahaddy.com/?g=gnam&id=12" id="test_link" type="text" class="col6 validate center">
-                </form></div>
-            
+                    <input  value="http://www.gtahaddy.com/?g=gnam&id=12" id="test_link" type="text"  class="col6 validate center"  readonly>
+                </form> 
+                </div>
+                <div class="col"> 
+                  <br>
+                <a  onclick="copy_link()" style="" >نسخ الرابط</a>
+              </div>
         
-        </div>
-        <div class="row center"><a onClick="join()" class="btn waves-effect waves-light btn-large center"></a> <i class="material-icons right"></i>إبداء  
+        </div> 
+        <div class="row center"><a onClick="join()" class="btn waves-effect waves-light btn-large center"><i class="material-icons right"></i>إبداء</a>   
         </a>
             </div>
           
@@ -88,12 +96,43 @@
 //////////////////////////////////////////////////////////////////////////////
 function join(){
 //  alert("link:"+$('#test_link:text').val());
-  window.location.href=$('#test_link:text').val();
-  return false;
+     
+    //setTimeout(function(){  }, 1500);
+    window.location.href=$('#test_link:text').val();
+   return false;
+//make the group link avalable
+  
 }
+/////////////////////////////////////////////////////////////////////////
+function copy_link(){
+  var clipboardText = "";
+     clipboardText = $('#test_link:text').val();
+     copyToClipboard( clipboardText );
+    iqwerty.toast.toast('تم نسخ الرابط');
+}
+////////////////////////////////////////////////////////////////////
+function copyToClipboard(text) {
+
+var textArea = document.createElement( "textarea" );
+textArea.value = text;
+document.body.appendChild( textArea );       
+textArea.select();
+
+try {
+   var successful = document.execCommand( 'copy' );
+   var msg = successful ? 'successful' : 'unsuccessful';
+//  console.log('Copying text command was ' + msg);
+} catch (err) {
+   console.log('Oops, unable to copy',err);
+}    
+document.body.removeChild( textArea );
+}
+////////////////////////////////////////////////////////////////////
+
       </script>
       
       
+      <script src="toast.min.js"></script>
     
     </body>
       
