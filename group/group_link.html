@@ -38,7 +38,7 @@
               </div>
         
         </div> 
-        <div class="row center"><a onClick="join()" class="btn waves-effect waves-light btn-large center"><i class="material-icons right"></i>إبداء</a>   
+        <div class="row center"><a onClick="join()" class="btn waves-effect waves-light btn-large center"><i class="material-icons right"></i>إبداء التحدي</a>   
         </a>
             </div>
           
@@ -98,7 +98,10 @@ function join(){
 //  alert("link:"+$('#test_link:text').val());
      
     //setTimeout(function(){  }, 1500);
-    window.location.href=$('#test_link:text').val();
+    topicid= parseURLParams(window.location.href).topicid;
+    admin_name = parseURLParams(window.location.href).admin_name
+ window.location.href="quiz_page.html?g_id="+parseURLParams(window.location.href).g_id +"&topicid="+topicid+"&name="+admin_name;
+
    return false;
 //make the group link avalable
   

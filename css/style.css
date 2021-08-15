@@ -42,11 +42,8 @@ main {
 #after_result_action {
     font-size: 17px;
     color: #fff;
-    background-color: green;
-    border: 1px solid green;
+    
     height: 100%;
-    border-radius: 10%;
-    -moz-border-radius: 10%;
-    -webkit-border-radius: 10%;
+     
     width: 100%;
 }

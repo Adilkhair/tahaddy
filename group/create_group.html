@@ -25,9 +25,15 @@
             <div class="row center"><div class="col s6 offset-s3">
                 <form   onsubmit="passing()" method="GET" action="select_topic.html" >
                     <div class="input-field ">
-                      <input value=""    id="gname" type="text" class="col6 validate center">
+                      <input value=""    id="gname" type="text" required="required" class="col6 validate center">
                       <label class="active" for="first_name">إسم المجموعة</label>
                     </div>
+
+                    <div class="input-field ">
+                      <input value=""    id="admin_name" type="text" required="required" class="col6 validate center">
+                      <label class="active" for="admin_name">إسمك</label>
+                    </div>
+
                    
                     <button class="btn waves-effect waves-light" type="submit"  > <i class="material-icons right">send</i>إنشاء مجموعة
                   </button>
@@ -57,11 +63,8 @@
         function passing(){
          // Store it in the local storage
          localStorage.setItem('gname',$('#gname').val()  );
-
-          // Get it from the local storage
-           // var selected = localStorage.getItem('gname');
-       //   alert("selected:"+selected);
-            
+         localStorage.setItem('admin_name',$('#admin_name').val());
+          
         }
         </script>
         

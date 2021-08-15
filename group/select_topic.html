@@ -109,7 +109,9 @@
       //genrate quiz link 
 
        alert(data);
-   window.location.href="group_link.html?topicid="+id+"&g_id="+data+'#hash';
+      
+       var admin_name = localStorage.getItem('admin_name');
+   window.location.href="group_link.html?admin_name="+admin_name+"&topicid="+id+"&g_id="+data+'#hash';
     }});
    return false;
   }

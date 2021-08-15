@@ -1,105 +1,24 @@
-
-
-jQuery(document).ready(function(){
- /*  var  data2= [{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
-},
-{"id":1,"created_at":"2021-07-31T09:29:55.000000Z","updated_at":"2021-07-31T09:29:55.000000Z","q":"Book?","is_active":"y",
-  "question_choice":
-  [
-  {"id":1,"created_at":"2021-07-31T09:31:53.000000Z","updated_at":"2021-07-31T09:31:53.000000Z","question_id":"1","is_right":"n","o":"\u0643\u0631\u0633\u064a"},
-  {"id":2,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"y","o":"\u0643\u062a\u0627\u0628"},
-  {"id":3,"created_at":"2021-07-31T09:32:44.000000Z","updated_at":"2021-07-31T09:32:44.000000Z","question_id":"1","is_right":"n","o":"\u0633\u064a\u0627\u0631\u0629"}
- ]
+/* if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("http://localhost/tahaddy/sw.js")
+    .then(reg => console.log("service worker registered"))
+    .catch(err => console.log("service worker not registered", err));
 }
-] *//* [
-    {
-      q : "Book",
-      o : [
-        "قلم",
-        "كتاب",
-        "سبورة",
-        "قلم"
-      ],
-      a : 1 // arrays start with 0, so answer is 70 meters
-    },
-    {
-      q : "Car",
-      o : [
-        "تاب",
-        "حاسب الي",
-        "تلفاذ",
-        "سيارة"
-      ],
-      a : 3
-    },
-    {
-      q : "Man",
-      o : [
-        "أخ",
-        "أخت",
-        "رجل",
-        "إمراءة"
-      ],
-      a : 2
-    },
-    {
-      q : "Computer",
-      o : [
-        "حاسب الي",
-        "هاتف جوال",
-        "تلفاذ",
-        "كرسي"
-      ],
-      a : 0
-    },
-    {
-      q : "Tree",
-      o : [
-        "تلفاذ",
-        "بيت",
-        "كرسي",
-        "شجرة"
-      ],
-      a : 3
-    }
-    ] */
+
+ */
+/* jQuery(document).ready(function(){ */
+ 
     let question_count=1;
     //let randomnumber=Math.floor( Math.random() * 4 );
    
 /*####### get 10 numbers no repeate ################################*/
 var min = 0;
 var max = 10;
-//Number of numbers to extract
+
+let correctAnsIndex=0;
+    let correctAns ="";
+   let data2=null; 
+
 var stop = 10;
 var numbers = [];
 for (let i = 0; i < stop; i++) {
@@ -127,18 +46,31 @@ var ranNums = shuffle(numbers);
     let id= parseURLParams(window.location.href).id;  //topic id
     let name= parseURLParams(window.location.href).name;  //topic id
     $("#topic_name").text(name);
+//////////////////////////////////////////////////////////////////////////////////////////
     $.ajax({
     method : 'GET',
     url:'http://localhost/tahaddy_dash/public/test?id='+id,
     dataType: 'json',
-    success:function newQuestion(data2){
-      if(data2.length == 0)
+    success:function newQuestion(data){
+      data2 = data;
+      if(data2.length < 10){
          alert("لا توجد اسئلة");
-    $('#randomquestion').text(data2[randomnumber].question);
-      $('#btn1').text(data2[randomnumber].question_choice[0].choice);
+          window.location.href="index.html";
+        //  window.location.href="";
+          return;
+      }
+   $('#randomquestion').text(data2[randomnumber].question);
+   
+let options=Object.keys(data2[randomnumber].question_choice).length;
+$("#options").empty();
+for(let i=0; i<options; i++){
+      var r= $(' <div class="row  center-align" > <a   class="waves-effect waves-light  btn btn-large home_scr btn_opt"  >'+data2[randomnumber].question_choice[i].choice+'</a></div>');
+        $("#options").append(r);  
+}
+     /*  $('#btn1').text(data2[randomnumber].question_choice[0].choice);
       $('#btn2').text( data2[randomnumber].question_choice[1].choice);
-      $('#btn3').text( data2[randomnumber].question_choice[2].choice);
-    // $('#btn4').text( data2[randomnumber].question_choice[3].o);
+      $('#btn3').text( data2[randomnumber].question_choice[2].choice); */
+   
     let correctAnsIndex=0;
     let correctAns ="";
     data2[randomnumber].question_choice.forEach(myFunction);
@@ -152,64 +84,11 @@ var ranNums = shuffle(numbers);
    //{id ,created_at ,updated_at ,question_id ,is_right ,o} 
     console.log("correctAns:" +correctAns);
 
-    $('.btn_opt').on('click', function(){
-    //console.log(data)
-   
-   
-         question_count++;
-   
-    let userAns=$(this).text();
-    /* alert("user ans:"+ userAns);
-    alert("user correctAns:"+ correctAns); */
-    if (userAns  == correctAns ){
-    $('h3').text("إجابة صحيحة")
-    
-    points += 1;
-     
-     
-    $(this).attr('style', 'background-color: green !important');
-   
-   $(this).append('<i class="material-icons">check</i>');
-    }
-    else{
-    $('h3').text("إجابة خاطئة");
-    $(this).attr('style', 'background-color: red !important');
-   $(this).append('<i class="material-icons">clear</i>');
 
-    }
-    
-   setTimeout(function() 
-    {
-      if(question_count <= 10) { $('.btn').attr('style', 'background-color: #fff !important');
-       $('#randomquestion').text(data2[randomnumber].question);
-       $('#question_count').text(question_count+"-"+10);
-       $('#btn1').text(data2[randomnumber].question_choice[0].choice);
-       $('#btn2').text( data2[randomnumber].question_choice[1].choice);
-       $('#btn3').text( data2[randomnumber].question_choice[2].choice);
-    }
-  }, 300);
+    }//seccess func
+  }) //$ajax
 
- 
-    
-    
-     
-  if(question_count <= 10) {
-    randomnumber=ranNums.next().value;//Math.floor( Math.random() * 4 );     
-       
-    data2[randomnumber].question_choice.forEach(myFunction);
-    function myFunction(item, index, arr) {
-      if(arr[index].is_right == "y"){
-        correctAnsIndex=index;
-        correctAns=arr[index].choice;
-      } 
-    } 
-  }
-   
-    if(question_count > 10) { stopInterval();} 
-   
-    })
-    }
-    }) //$ajax
+
 //////////////////////////////////////////////////////////////////////
     var count =0;
     var timer = setInterval(function() {
@@ -223,101 +102,31 @@ var ranNums = shuffle(numbers);
     }, 2000);
     /////////////////////////////////////////////////////////////////
     var stopInterval = function() {
-     /*  $('#btn1').attr('disabled', true); 
-      $('#btn2').attr('disabled', true); 
-      $('#btn3').attr('disabled', true); 
-      $('#btn4').attr('disabled', true);  */
-      $('#btn1').hide();
-      $('#btn2').hide();
-      $('#btn3').hide();
-      $('#btn4').hide();
-      $('#randomquestion').hide();
+      $("#options").empty();
     $('h3').text("انتهي الإختبار");
+    $('#randomquestion').hide();
       $('h3').text("النتيجة" + points + " درجة! "); // if you see final score then open this comment
-    $('span').hide()
+    
     $(".submit").hide();
     clearInterval(timer);
-    $("#after_result_action>p").text("النسبة:"+(points/10)*100 + "%");
-    $("#after_result_action> #correct_count").text("عدد الإجابات الصحيحة:"+ points );
-    $("#after_result_action> #rowng_count").text("عدد الاجابات الخاطئة:"+   (10-points)  );
+    $("#after_result_action #points").text("النسبة:"+(points/10)*100 + "%");
+    $("#after_result_action  #correct_count").text("عدد الإجابات الصحيحة:"+ points );
+    $("#after_result_action  #rowng_count").text("عدد الاجابات الخاطئة:"+   (10-points)  );
     
+     
     
     $("#after_result_action").show();
     $("#after_result_action_btn").show();
 
- ////////////group test
-   /*  let id= parseURLParams(window.location.href).id;  //group
-      let name= parseURLParams(window.location.href).name;
-      let result =(points/10)*100;
-            $.ajax({
-              method : 'GET',
-              url:'http://localhost/tahaddy_dash/public/save_g_result?std_name='+ name+'&result='+result+'&quiz_group_id='+id,
-              //dataType: 'json',
-              success:function newQuestion(data){
-               alert("لقد تم حفظ نتيجة الاختبار");
-               
-               $("#after_result_action_btn > a").attr("href", "group_result.html?id="+id);
-              }
-            
-            }); */
+ 
 
     }//stop
     /////////////////////////////////////
 
-    })
+    /* }) */
 
 
-
-/* const container = document.querySelector("#quiz_cat")
-const categ = [
-  { name: "قران كريم", id:"1"  },
-  { name: "السيييرة النبوية" , id:"2" },
-  { name: "كلمات انكليزية كريم" , id:"3" },
-  { name: "معلومات عامة" , id:"4" },
-  ]
-
-  const showCoffees = () => {
-    let output = ""
-    categ.forEach(
-      ({ name, id }) =>
-        (output += `
-                  <div class="row  center-align">
-                  <a class="waves-effect waves-light btn btn-large home_scr" href="quiz_page.html?id=${id}">${name}</a>
-                </div>
-                `)
-    )
-    container.innerHTML = output;
-    }
-    document.addEventListener("DOMContentLoaded", showCoffees);
-
-    /////////////////////////////////////////////
-    const q = document.querySelector("#quiz_q")
-    const exam_1 = [
-      { q: "Book?", id:"1"  },
-      { q: "Car?" , id:"2" },
-      { q: "Pen?" , id:"3" },
-      { q: "Ball?" , id:"4" },
-      ]
-    const showQues = () => {
-      let output = '<p class="text-lighten-4 center"> <h1 id="cat_no"></h1>(1-10)</p><br/>';
-      exam_1.forEach(
-        ({ q, id }) =>
-          (output += `
-        <h2 id="logo-container" href="/" class="brand-logo center"  > ${q} </h2>
-        <div class="row  center-align">
-          <a class="waves-effect waves-light  btn btn-large home_scr" href="quiz_result.html">قلم</a>
-        </div>
-         <div class="row  center-align"> 
-           <a class="waves-effect waves-light  btn btn-large home_scr" href="quiz_result.html"> سبورة</a>
-        </div>
-        <div class="row  center-align"> 
-          <a class="waves-effect waves-light  btn btn-large home_scr" href="quiz_result.html" >كتاب</a>
-         </div>
-                  `)
-      )
-      q.innerHTML = output;
-      }
-      document.addEventListener("DOMContentLoaded", showQues); */
+ 
 
       function* shuffle(array) {
 
@@ -362,11 +171,63 @@ window.location.href = page + queryString;
   }
   return parms;
 }
-//////////////////////////////////////////////////////////////////////////////
  
-//Sort the array in ascending order
-/* function sort() {
-  numbers.sort(function(a, b){return a-b});
-  document.getElementById("array_number").innerHTML = numbers.join(" - ");
-} */
-////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+    //$('#options  a').on('click', function(){
+ //     function answer_click(){
+  $(document).on("click", ".btn_opt", function(){
+        //console.log(data)
+    //    alert("clicked");
+             question_count++;
+        let userAns=$(this).text();
+        /* alert("user ans:"+ userAns);
+        alert("user correctAns:"+ correctAns); */
+        if (userAns  == correctAns ){
+        $('h3').text("إجابة صحيحة")
+        points += 1;
+        $(this).attr('style', 'background-color: green !important');
+       
+       $(this).append('<i class="material-icons">check</i>');
+        }
+        else{
+        $('h3').text("إجابة خاطئة");
+        $(this).attr('style', 'background-color: red !important');
+       $(this).append('<i class="material-icons">clear</i>');
+        }
+       setTimeout(function() 
+        {
+          if(question_count <= 10) { $('.btn').attr('style', 'background-color: #fff !important');
+           $('#randomquestion').text(data2[randomnumber].question);
+           $('#question_count').text(question_count+"-"+10);
+    
+           let options=Object.keys(data2[randomnumber].question_choice).length;
+        //   alert("options:"+options);
+           $("#options").empty();
+            for(let i=0; i<options; i++){
+            //  alert("kkkkk");
+                  var r= $(' <div class="row  center-align" > <a    class="waves-effect waves-light  btn btn-large home_scr btn_opt"  >'+data2[randomnumber].question_choice[i].choice+'</a></div>');
+                    $("#options").append(r);  
+            }
+           /* $('#btn1').text(data2[randomnumber].question_choice[0].choice);
+           $('#btn2').text( data2[randomnumber].question_choice[1].choice);
+           $('#btn3').text( data2[randomnumber].question_choice[2].choice); */
+        }
+      }, 300);
+        
+      if(question_count <= 10) {
+        randomnumber=ranNums.next().value;//Math.floor( Math.random() * 4 );     
+           
+        data2[randomnumber].question_choice.forEach(myFunction);
+        function myFunction(item, index, arr) {
+          if(arr[index].is_right == "y"){
+            correctAnsIndex=index;
+            correctAns=arr[index].choice;
+          } 
+        } 
+      }
+       
+        if(question_count > 10) { stopInterval();} 
+       
+         })
+    /////////////////////////onclick///////////////////////////////////////////////////////
