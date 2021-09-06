@@ -2,6 +2,8 @@
 النمازج
  المستخدمين
  
+ [نموذج الطالب المتعثر دراسيا بالجامعة - form id = 14]
+ 
  background-color: #EFEFEF;
     margin-bottom: 10p
 	
@@ -22,19 +24,7 @@
     margin-bottom: 10px;
 }
 
-class RegisterController extends Controller
-{
-    protected $redirectTo = '/home';
-
-    protected function redirectTo()
-    {
-        if (auth()->user()->role_id == 1) {
-            return '/admin';
-        }
-        return '/home';
-    }
-
-}
+ 
 
 
    Apple started supporting PWA from iOS 11.3

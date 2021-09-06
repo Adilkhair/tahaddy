@@ -92,7 +92,17 @@ $("#start_btn").click(function(){
  let name= $('#user_name:text').val();
  let id= parseURLParams(window.location.href).g_id;//id is group id
  let topicid = parseURLParams(window.location.href).topicid;
- window.location.href="quiz_page.html?g_id="+id+"&topicid="+topicid+"&name="+name;
+ //send ajax to update number of joined
+ $.ajax({
+      method : 'GET',
+      url:'http://localhost/tahaddy_dash_sidbar/public/update_of_joined/'+id,
+         //dataType: 'json',
+      success:function newQuestion(data){     
+     
+    // console.log(data);
+        }});
+
+window.location.href="quiz_page.html?g_id="+id+"&topicid="+topicid+"&name="+name;
   
 });
 ////////////////////////////////////////////////////////////////////////////

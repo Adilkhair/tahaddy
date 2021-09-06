@@ -1,11 +1,11 @@
-/* if ("serviceWorker" in navigator) {
+ if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("http://localhost/tahaddy/sw.js")
     .then(reg => console.log("service worker registered"))
     .catch(err => console.log("service worker not registered", err));
 }
 
- */
+  
 /* jQuery(document).ready(function(){ */
  
     let question_count=1;
@@ -97,7 +97,6 @@ for(let i=0; i<options; i++){
     /* if(count == 0) {
     stopInterval()
     } */
-    
     
     }, 2000);
     /////////////////////////////////////////////////////////////////
@@ -200,6 +199,7 @@ window.location.href = page + queryString;
           if(question_count <= 10) { $('.btn').attr('style', 'background-color: #fff !important');
            $('#randomquestion').text(data2[randomnumber].question);
            $('#question_count').text(question_count+"-"+10);
+           $('.determinate').css('width', (question_count*10)+""+'%');
     
            let options=Object.keys(data2[randomnumber].question_choice).length;
         //   alert("options:"+options);
