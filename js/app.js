@@ -1,8 +1,9 @@
+ 
  if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("http://adilmobarek.com/nour/sw.js")
+   navigator.serviceWorker
+    .register(host+"nour/sw.js")
     .then(reg => console.log("service worker registered"))
-    .catch(err => console.log("service worker not registered", err));
+    .catch(err => console.log("service worker not registered", err));/* */
 }
 
   
@@ -49,7 +50,7 @@ var ranNums = shuffle(numbers);
 //////////////////////////////////////////////////////////////////////////////////////////
     $.ajax({
     method : 'GET',
-    url:'http://adilmobarek.com/tahaddy_dash_sidbar/public/test?id='+id,
+    url:'http://localhost/tahaddy_dash/public/test?id='+id,
     dataType: 'json', 
     success:function newQuestion(data){
       data2 = data;
@@ -104,13 +105,13 @@ for(let i=0; i<options; i++){
       $("#options").empty();
     $('h3').text("انتهي الإختبار");
     $('#randomquestion').hide();
-      $('h3').text("النتيجة" + points + " درجة! "); // if you see final score then open this comment
+      $('h3').text(" " + points + " درجة! "); // if you see final score then open this comment
     
     $(".submit").hide();
     clearInterval(timer);
-    $("#after_result_action #points").text("النسبة:"+(points/10)*100 + "%");
-    $("#after_result_action  #correct_count").text("عدد الإجابات الصحيحة:"+ points );
-    $("#after_result_action  #rowng_count").text("عدد الاجابات الخاطئة:"+   (10-points)  );
+    $("#after_result_action #points").text(" :"+(points/10)*100 + "%");
+    $("#after_result_action  #correct_count").text(" "+ points );
+    $("#after_result_action  #rowng_count").text(" "+   (10-points)  );
     
      
     
