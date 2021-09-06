@@ -50,7 +50,7 @@ var ranNums = shuffle(numbers);
     $.ajax({
     method : 'GET',
     url:'http://adilmobarek.com/tahaddy_dash_sidbar/public/test?id='+id,
-    dataType: 'json',
+    dataType: 'json', 
     success:function newQuestion(data){
       data2 = data;
       if(data2.length < 10){
