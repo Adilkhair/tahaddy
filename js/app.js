@@ -48,7 +48,7 @@ var ranNums = shuffle(numbers);
     let name= parseURLParams(window.location.href).name;  //topic id
     $("#topic_name").text(name);
 //////////////////////////////////////////////////////////////////////////////////////////
-    $.ajax({
+    $.ajax({   
     method : 'GET',
     url:api_url+'public/test?id='+id,
     dataType: 'json', 
