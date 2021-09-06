@@ -50,7 +50,7 @@ var ranNums = shuffle(numbers);
 //////////////////////////////////////////////////////////////////////////////////////////
     $.ajax({
     method : 'GET',
-    url:'http://localhost/tahaddy_dash/public/test?id='+id,
+    url:api_url+'public/test?id='+id,
     dataType: 'json', 
     success:function newQuestion(data){
       data2 = data;
