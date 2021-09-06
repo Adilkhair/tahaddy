@@ -1,6 +1,6 @@
  if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("http://localhost/tahaddy/sw.js")
+    .register("http://adilmobarek.com/nour/sw.js")
     .then(reg => console.log("service worker registered"))
     .catch(err => console.log("service worker not registered", err));
 }
@@ -49,7 +49,7 @@ var ranNums = shuffle(numbers);
 //////////////////////////////////////////////////////////////////////////////////////////
     $.ajax({
     method : 'GET',
-    url:'http://localhost/tahaddy_dash/public/test?id='+id,
+    url:'http://adilmobarek.com/tahaddy_dash_sidbar/public/test?id='+id,
     dataType: 'json',
     success:function newQuestion(data){
       data2 = data;
