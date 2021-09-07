@@ -8,6 +8,7 @@ const assets = [
   "select_topic.html",
   
   "js/app.js",
+  "config/app.js",
   "js/materialize.min.js",
   "css/style.css",
   "css/materialize.min.css",
